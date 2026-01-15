@@ -648,7 +648,7 @@ jupyter lab notebooks/02_pipeline_dev_phase3.ipynb
 
 ## 6. Current Progress & Status (End of Week 6)
 
-### 6.1 Completed ✅
+### 6.1 Completed 
 
 - **Data acquisition module** (`src/data_acquisition.py`): Loads raw CSV with error handling.
 - **Data cleaning module** (`src/data_cleaning.py`): Comprehensive transformations (date parsing, categorical normalization, derived fields).
@@ -659,12 +659,12 @@ jupyter lab notebooks/02_pipeline_dev_phase3.ipynb
 - **Repository structure**: Aligned with best practices (data/, src/, tests/, notebooks/, reports/).
 - **Documentation**: This architecture review document (Week 6 checkpoint).
 
-### 6.2 In Progress 🔄
+### 6.2 In Progress 
 
 - **Phase 3 integration notebook** (`notebooks/02_pipeline_dev_phase3.ipynb`): Currently importing and testing `src/` modules; adding narrative markdown sections describing pipeline flow and initial findings.
 - **Continuous integration setup** (optional, not required for Week 6): GitHub Actions to run tests on every commit.
 
-### 6.3 Known Blockers & Risks ⚠️
+### 6.3 Known Blockers & Risks 
 
 #### Data Limitations (Inherited from Phase 2)
 
@@ -792,17 +792,17 @@ When presenting findings to stakeholders (city council, police administration, a
 
 | File | Purpose | Status (End of Week 6) |
 |------|---------|----------------------|
-| `src/config.py` | Constants & paths | ✅ Complete |
-| `src/data_acquisition.py` | CSV loading | ✅ Complete |
-| `src/data_cleaning.py` | Transformations | ✅ Complete |
-| `src/analysis_pipeline.py` | Orchestration | ✅ Complete |
-| `src/viz_definitions.py` | 7 plot functions | ✅ Complete |
-| `tests/test_data_cleaning.py` | Unit tests | ✅ Complete (6/6 passing) |
-| `notebooks/02_pipeline_dev_phase3.ipynb` | Integration notebook | 🔄 In progress |
-| `reports/phase3_architecture_review.md` | This document | ✅ Complete |
-| `.gitignore` | Git exclusions | ✅ Complete |
-| `requirements.txt` | Dependencies | ✅ Complete |
-| `README.md` | Quick start guide | ✅ Complete |
+| `src/config.py` | Constants & paths | Complete |
+| `src/data_acquisition.py` | CSV loading | Complete |
+| `src/data_cleaning.py` | Transformations | Complete |
+| `src/analysis_pipeline.py` | Orchestration | Complete |
+| `src/viz_definitions.py` | 7 plot functions | Complete |
+| `tests/test_data_cleaning.py` | Unit tests | Complete (6/6 passing) |
+| `notebooks/02_pipeline_dev_phase3.ipynb` | Integration notebook | In progress |
+| `reports/phase3_architecture_review.md` | This document | Complete |
+| `.gitignore` | Git exclusions | Complete |
+| `requirements.txt` | Dependencies | Complete |
+| `README.md` | Quick start guide | Complete |
 
 ---
 
@@ -814,7 +814,6 @@ All design decisions prioritize **reproducibility, clarity, and responsible comm
 
 ---
 
-**Document Author**: AI Assistant  
+**Document Author**: Ninad Bhikaje
 **Date**: January 15, 2026  
-**Project Repository**: [Your GitHub URL]  
-**Phase 3 Week 6 Checkpoint**: ✅ Architecture Review Complete
+**Project Repository**: https://github.com/ninadbhikaje/Task_09_Syracuse_Open_Data_Civic_Project  
