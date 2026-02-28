@@ -1,26 +1,142 @@
-# Task_09_Syracuse_Open_Data_Civic_Project
+# SPD Personnel Complaints Analysis Pipeline
 
-## Phase 1 – Project Framing & Data Selection (Weeks 1-2)
+This repository contains a reproducible analysis pipeline and interactive dashboard built around the SPD Personnel Complaints dataset (2021 to present). The project transforms raw complaint records into a cleaned, documented dataset and seven core visualizations that help stakeholders explore complaint volume, allegation types, case status (open vs. closed), and resolution times while keeping data limitations front and center.
 
-During Phase 1, the project focused on defining a clear civic-technology question grounded in real-world accountability: what publicly reported SPD personnel complaints can reveal about patterns in misconduct allegations and how they are handled administratively over time. The work began by surveying the City of Syracuse open data portal and selecting the SPD Personnel Complaints dataset as a suitable source because it is structured, machine-readable, and directly connected to public oversight concerns. A key emphasis in this phase was clarifying that complaint records capture **reported** behavior and internal classifications rather than the full universe of incidents, which affects how trends and rates should be interpreted and communicated. Phase 1 also documented initial ethical and bias risks, including underreporting, unequal access to complaint mechanisms, and the limits of drawing strong conclusions without demographic or geographic fields. Finally, this phase established reproducible workflow conventions—such as a raw/processed data directory structure, notebook-based analysis, and a clear separation between data transformation, visualization, and narrative explanation—to support transparency, auditability, and future extensibility of the project.
+---
 
-## Phase 2 – Exploration & Visual Analytics (Weeks 3-4)
+## Project Motivation
 
-Phase 2 translated the conceptual framing into hands-on exploratory data analysis using the SPD Personnel Complaints (2021–Present) CSV in a Jupyter notebook environment. The work started with careful data validation: refining a column-by-column data dictionary, parsing complaint and closure dates, normalizing categorical fields (for example allegation types and intake sources), and quantifying substantial missingness in outcome-related columns and disciplinary fields. Building on this foundation, Phase 2 implemented seven core visualizations—complaints per year, complaints by allegation type, allegation outcomes by year, open vs. closed complaints by quarter, a resolution-time histogram for closed cases, resolution time by allegation type using boxplots, and complaints by intake source—to construct a multi-angle view of complaint volume, allegation content, timelines, and administrative flow. Each visualization was paired with interpretation text that foregrounded uncertainty, especially the impact of partial temporal coverage, missing outcomes, and the large share of open cases on any conclusions about accountability or discipline. Phase 2 also used these visuals to generate and document concrete, testable hypotheses (such as force-related allegations taking longer to resolve or intake channel being associated with different closure patterns), positioning them as inputs for more rigorous modeling, dashboard design, and stakeholder-facing storytelling in later phases of the project.
+Complaint data can be messy and hard to interpret: fields are inconsistently formatted, outcomes are often missing, and charts are easy to misread without proper context. This project addresses that by:
 
-## Phase 3 – Development Overview (Weeks 5-6)
+- Standardizing ingestion and cleaning of the SPD Personnel Complaints dataset.  
+- Producing repeatable metrics and visualizations that can be regenerated as new data arrives.  
+- Explicitly documenting limitations such as missing outcomes, recency bias, and censoring of open cases so users do not over-interpret the results.
 
-In Phase 3, the project evolves from exploratory analysis into a reproducible, testable analysis pipeline for the SPD Personnel Complaints dataset, with a clear focus on software engineering practices and responsible use of the data.
+---
 
-The repository is organized into distinct layers: `data/` for raw and processed CSVs, `src/` for pipeline code (data acquisition, cleaning, orchestration, and visualization functions), `tests/` for unit tests, `notebooks/` for narrative and exploratory work, and `reports/` for written outputs such as the architecture review. The core pipeline loads the raw CSV, applies standardized cleaning and transformation steps (date parsing, open/closed flags, yearly and quarterly breakdowns, allegation and intake-source normalization, and resolution time calculation), and writes a processed file used by all downstream analyses and visualizations.
+## Key Features
 
-Phase 3 also introduces quality assurance and validation: key transformations are unit-tested, simple validation summaries are produced after cleaning, and all derived metrics are designed to respect known data limitations such as high missingness in outcomes and the large proportion of open cases. The seven Phase 2 visualizations are refactored into reusable plotting functions, positioning the project for a future interactive dashboard and more formal deployment in later weeks of Phase 3.
+- **Reproducible pipeline** from raw CSV → cleaned dataset → aggregated outputs for charts.  
+- **Interactive dashboard** (Plotly Dash) with seven views:  
+  1. Complaints per Year  
+  2. Complaints by Allegation Type (Top 15)  
+  3. Disposition Outcomes by Year (subset with recorded outcomes)  
+  4. Open vs. Closed Complaints by Quarter  
+  5. Resolution Time Histogram (closed cases only)  
+  6. Resolution Time by Allegation Type (top allegation categories)  
+  7. Complaints by Intake Source  
+- **Filters and controls** for date range, allegation type, and intake source.  
+- **Validation summaries** reporting row counts, missingness in key fields, and obvious anomalies.
 
-## Phase 3 – Refinement & Prototype Delivery (Weeks 7-8)
+---
 
-Phase 3 evolved the SPD Personnel Complaints analysis from exploratory notebooks into a production-ready pipeline with interactive dashboard capabilities. Week 7 focused on code refinement: enhanced error handling and documentation across all modules, standardized visualization aesthetics (color palettes, labels, grid lines), comprehensive edge case testing (empty datasets, missing values, invalid dates), and performance optimization for 10K+ row datasets. Week 8 delivered a fully functional Plotly Dash dashboard featuring seven core visualizations, complaints per year, complaints by allegation type (top 15), disposition outcomes by year (stacked bar), open vs. closed cases by quarter, resolution time histogram with median reference, resolution time by allegation type (boxplot), and complaints by intake source all with interactive filters, tooltips, and export functionality. The prototype achieved 95%+ test coverage, sub-2-second load times, and zero critical bugs in user acceptance testing. Technical achievements include robust timezone-aware datetime parsing, graceful handling of ~70% missing outcome fields, accessibility-compliant visualizations, and a modular PEP 8 compliant codebase organized into `data/` (raw and processed datasets), `src/` (core pipeline modules), `dashboard/` (Plotly Dash application), `tests/` (unit and integration tests), and `docs/` (documentation). Known limitations include high missingness in outcome fields, potentially incomplete recent quarters, hardcoded allegation type mappings, and read-only dashboard functionality. The pipeline is built with Python 3.9+, Pandas, Matplotlib/Seaborn, Plotly Dash, and Pytest.
+## Repository Structure
 
-## Phase 3 – Testing & Feature Completion (Weeks 9-10)
+```text
+spd-complaints-analysis/
+├── data/
+│   ├── raw/                      # Original CSVs (e.g., SPD_Personnel_Complaints_2021_to_Present.csv)
+│   └── processed/                # Cleaned / derived outputs used by charts
+├── src/
+│   ├── data_acquisition.py       # Load raw data and basic schema checks
+│   ├── data_cleaning.py          # Cleaning, normalization, and feature engineering
+│   ├── analysis.py               # Aggregations used by the 7 visualizations
+│   ├── visualizations.py         # Reusable plotting helpers
+│   └── pipeline.py               # Orchestrated raw → clean → analyzed run
+├── dashboard/
+│   └── app.py                    # Plotly Dash application
+├── tests/
+│   ├── test_cleaning.py
+│   ├── test_analysis.py
+│   └── test_pipeline.py
+├── notebooks/                    # Exploratory analysis and ad-hoc checks
+├── reports/                      # Written outputs (e.g., architecture review, phase summaries)
+├── docs/
+│   ├── TECHNICAL.md              # Developer / maintainer guide
+│   └── METHODOLOGY.md            # Analysis methodology and caveats
+└── README.md                     # You are here
+```
 
-Weeks 9–10 finalized Phase 3 by hardening the SPD Personnel Complaints analysis pipeline and declaring the interactive dashboard feature-complete. This period focused on expanding unit and integration tests for all critical transformations (datetime parsing, allegation normalization, resolution time calculation, and chart aggregations), adding automated validation summaries for data quality, and improving edge-case handling for empty or partial datasets. The Plotly Dash dashboard was stabilized with robust error handling and clear user-facing messages about data limitations, while documentation was brought to submission quality with an updated README, data dictionary, and module-level API notes. By the end of Week 10, the project delivered a reproducible, well-tested pipeline and dashboard that cleanly separate acquisition, cleaning, analysis, and presentation, providing a solid foundation for Phase 4 deployment and advanced analytics.
+---
 
+## Installation
+
+```bash
+git clone https://github.com/<your-username>/spd-complaints-analysis.git
+cd spd-complaints-analysis
+
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Core dependencies include Python 3.9+, Pandas, NumPy, Plotly, Dash, and Pytest.
+
+---
+
+## Usage
+
+### 1) Run the pipeline
+
+Run the end-to-end pipeline to generate a processed dataset under `data/processed/`:
+
+```bash
+python -m src.pipeline \
+  --input data/raw/SPD_Personnel_Complaints_2021_to_Present.csv \
+  --output data/processed/spd_complaints_processed.csv
+```
+
+This command loads the raw CSV, parses complaint and closure dates, derives fields such as `Year`, `YearQuarter`, `Is_Open`, and `Resolution_Days`, normalizes allegation and intake-source text, and writes a cleaned dataset for downstream analysis.
+
+### 2) Launch the dashboard
+
+With the processed data in place, start the Plotly Dash application:
+
+```bash
+python dashboard/app.py
+```
+
+Then open your browser at:
+
+- http://127.0.0.1:8050
+
+Use the controls on the page to apply filters; charts update reactively and expose details through tooltips.
+
+---
+
+## Screenshots
+
+Dashboard and chart screenshots are stored under `docs/images/`:
+
+```md
+![Dashboard overview](docs/images/dashboard-overview.png)
+![Complaints per year](docs/images/complaints-per-year.png)
+![Resolution time histogram](docs/images/resolution-time-hist.png)
+```
+
+These images show the main layout and examples of the yearly and resolution-time views.
+
+---
+
+## Data Source and Citations
+
+- Dataset: SPD Personnel Complaints 2021–present, provided in this repository as `data/raw/SPD_Personnel_Complaints_2021_to_Present.csv`.  
+- If you replace or refresh the dataset, keep the same column structure so the pipeline and dashboard continue to run without modification.
+
+When citing this work, reference both the original data publisher and this repository’s analysis and pipeline.
+
+---
+
+## Known Limitations
+
+- Outcome variables (sustained, unfounded, unsubstantiated) are missing for many records, so outcome-based charts describe only the subset with recorded outcomes and may not generalize to all complaints.  
+- Recent quarters naturally contain more open cases and partial data entry; trends in open-case counts over time are influenced by process lag and reporting practices.  
+- Resolution-time metrics exclude currently open complaints, so long-running unresolved cases are not represented in those distributions.  
+- Allegation and intake-source labels are cleaned and mapped through a set of rules (e.g., fixing common typos, collapsing near-duplicates); new or rare categories may require periodic updates to these mappings.
+
+---
+
+## Maintainer
+
+Project maintainer: **Ninad Bhikaje**.  
+For questions or suggestions, please open a GitHub issue in this repository.
