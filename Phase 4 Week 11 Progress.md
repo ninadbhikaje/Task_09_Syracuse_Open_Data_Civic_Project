@@ -1,7 +1,6 @@
-# Phase 4 – Week 11: Polish & Documentation (Part 1)
+# Phase 4 – Week 11: Progress
 
 **Project:** SPD Personnel Complaints Analysis Pipeline  
-**Phase:** Week 11 of 12 — Polish and Documentation (Part 1)
 
 Week 11 focused on the first half of the Phase 4 goals: tightening the behavior of the existing pipeline and dashboard, and laying the groundwork for full documentation. On the engineering side, I fixed bugs and edge cases uncovered during Phase 3, including more robust handling of missing or mis-typed columns, malformed dates, “Open” closure values, empty filter results, and very small datasets, while also adding clearer error messages so failures are explainable instead of silent. I did a light performance pass to confirm that the current Pandas-based aggregations and Plotly Dash callbacks remain responsive at the expected data size, addressing any obvious inefficiencies without changing the overall architecture. On the UX side, I refined visual design details such as consistent titles, labels, and help text across all seven charts, clarified in-dashboard warnings about data limitations (missing outcomes and recency bias in open cases), and improved default filter states so first-time users see a meaningful overview immediately.  
 
