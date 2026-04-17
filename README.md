@@ -33,12 +33,12 @@ In parallel, Phase 4 produced three audience-specific documents: README.md as th
 
 Weeks 13 & 14 of Phase 5 went by shifting the focus towards preparing a 10-minute presentation suitable for city officials and community members. I am currently working on structuring the presentation into four sections: The Problem (explaining the question and why Syracuse should care), The Approach (describing the data and methods accessibly), The Findings (showing key discoveries through live demo or visualizations), and Limitations and Future Work (acknowledging what couldn't be answered and how the project could extend). This week, I am gathering details to shape each section, identifying which of the seven dashboard charts are most impactful for a non-technical audience, and drafting speaker notes that emphasize transparency, accountability, and responsible interpretation of the SPD Personnel Complaints data.
 
-## Phase 5 - Presentation & Showcase Progress (Week 15–16) 
+## Phase 5 - Presentation & Showcase Progress (Week 15-16) 
 
 During Weeks 15–16, I have continued working on the Phase 5 presentation and showcase materials for the SPD Personnel Complaints Analysis project. Building on the earlier progress from Weeks 13–14, where I focused on outlining the presentation structure and identifying the main story, I am now further developing the actual presentation content by refining the key talking points, selecting the most effective visuals from the dashboard, and gathering the details needed to clearly explain the problem, approach, findings, and limitations to a non-technical audience.
 At this stage, I am still in the process of shaping the presentation into a polished 10-minute format suitable for city officials and community members. My recent progress has included improving how the findings are framed, thinking more carefully about which charts best support the story, and working on making the explanation more accessible, concise, and engaging. I am also continuing to organize the sections on limitations and future work so that the presentation remains transparent, responsible, and useful for public-facing discussion.
 
-## Phase 5 - Presentation & Showcase Progress (Week 17–18)
+## Phase 5 - Presentation & Showcase Progress (Week 17-18)
 
 During Weeks 17–18, I wrapped up Phase 5 of the SPD Personnel Complaints Analysis project by completing and submitting the final presentation slide deck. This felt like a good culmination of all the work that has gone into this project over the past several weeks.
 
