@@ -37,3 +37,17 @@ Weeks 13 & 14 of Phase 5 went by shifting the focus towards preparing a 10-minut
 
 During Weeks 15–16, I have continued working on the Phase 5 presentation and showcase materials for the SPD Personnel Complaints Analysis project. Building on the earlier progress from Weeks 13–14, where I focused on outlining the presentation structure and identifying the main story, I am now further developing the actual presentation content by refining the key talking points, selecting the most effective visuals from the dashboard, and gathering the details needed to clearly explain the problem, approach, findings, and limitations to a non-technical audience.
 At this stage, I am still in the process of shaping the presentation into a polished 10-minute format suitable for city officials and community members. My recent progress has included improving how the findings are framed, thinking more carefully about which charts best support the story, and working on making the explanation more accessible, concise, and engaging. I am also continuing to organize the sections on limitations and future work so that the presentation remains transparent, responsible, and useful for public-facing discussion.
+
+## Phase 5 - Presentation & Showcase Progress (Week 17–18)
+
+During Weeks 17–18, I wrapped up Phase 5 of the SPD Personnel Complaints Analysis project by completing and submitting the final presentation slide deck. This felt like a good culmination of all the work that has gone into this project over the past several weeks.
+
+The main deliverable for this period is the finalized **10-minute presentation PDF**, structured around the four core sections — The Problem, The Approach, The Findings, and Limitations & Future Work — and written in a way that is easy to follow for both city officials and community members, not just a technical audience.
+
+Here is what I got done during this period:
+
+- **Finalized and submitted the PDF slide deck** — went through all the slides, cleaned up the content, and made sure everything was ready for showcase and upload to the repository.
+- **Improved the visual design** — settled on a dark navy theme with color-coded section accents (green, amber, and cyan) to make each slide feel distinct and easy to read.
+- **Cleaned up layout issues** — fixed a few things I noticed during review, like text overflowing outside the shaded card areas and a subtitle that needed rewording on the title slide.
+- **Tightened the content throughout** — trimmed sentences where needed and made sure the bullet points were consistently spaced and aligned across every slide.
+- **Phase 5 is now complete** — the presentation materials are finalized and the PDF is saved in the repository as the official Phase 5 artifact.
