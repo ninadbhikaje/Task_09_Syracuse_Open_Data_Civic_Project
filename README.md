@@ -51,3 +51,18 @@ Here is what I got done during this period:
 - **Cleaned up layout issues** — fixed a few things I noticed during review, like text overflowing outside the shaded card areas and a subtitle that needed rewording on the title slide.
 - **Tightened the content throughout** — trimmed sentences where needed and made sure the bullet points were consistently spaced and aligned across every slide.
 - **Phase 5 is now complete** — the presentation materials are finalized and the PDF is saved in the repository as the official Phase 5 artifact.
+
+## Phase 5 - Presentation & Showcase Progress (Week 19-20)
+
+Weeks 19-20 were mostly about stepping back and reviewing everything I had submitted for the SPD Personnel Complaints Analysis project to make sure it was all correct, consistent, and up to the mark.
+
+I went back through the final PDF presentation slide by slide, re-read the progress notes and documentation I had written across the different phases, and double-checked that the GitHub repository was organized properly with all the right files in the right place. It was less about building new things and more about making sure what was already there was solid and could stand on its own.
+
+Here is what I focused on during this period:
+
+- **Reviewed the final PDF presentation** - went through each slide to confirm the content was accurate, the layout looked clean, and nothing was missing or out of place.
+- **Checked repository organization** - made sure all submitted files, documentation, and progress notes were properly structured and up to date.
+- **Re-read written documentation** - verified that the README sections, methodology notes, and progress summaries accurately reflected the actual work done throughout the project.
+- **General quality assurance** - looked for any inconsistencies between the written content, the data analysis, and the presentation to make sure everything was aligned.
+
+Overall, this was a wrap-up and quality check period. It felt good to go through everything one more time and confirm that the project as a whole is complete, accurate, and professionally presented.
