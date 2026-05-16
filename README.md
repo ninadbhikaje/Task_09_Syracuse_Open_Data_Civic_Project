@@ -66,3 +66,11 @@ Here is what I focused on during this period:
 - **General quality assurance** - looked for any inconsistencies between the written content, the data analysis, and the presentation to make sure everything was aligned.
 
 Overall, this was a wrap-up and quality check period. It felt good to go through everything one more time and confirm that the project as a whole is complete, accurate, and professionally presented.
+
+## Phase 5 - Presentation & Showcase Progress (Week 21–22)
+
+During Weeks 21–22, I continued reviewing and making final corrections to the SPD Personnel Complaints Analysis project to make sure everything was still correct, current, and up to the expected standard.
+
+I went back through the final presentation, written documentation, and repository content one more time to catch any remaining issues and confirm that all the materials were consistent with each other. At this stage, the focus was mainly on final quality checks, polishing the submission, and making sure the project was fully complete and ready for review without any loose ends.
+
+Overall, this period was about tightening up the final details and making sure the project was as clear, accurate, and professional as possible.
