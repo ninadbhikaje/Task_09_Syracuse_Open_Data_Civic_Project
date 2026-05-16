@@ -67,7 +67,7 @@ Here is what I focused on during this period:
 
 Overall, this was a wrap-up and quality check period. It felt good to go through everything one more time and confirm that the project as a whole is complete, accurate, and professionally presented.
 
-## Phase 5 - Presentation & Showcase Progress (Week 21–22)
+## Phase 5 - Presentation & Showcase Progress (Week 21-22)
 
 During Weeks 21–22, I continued reviewing and making final corrections to the SPD Personnel Complaints Analysis project to make sure everything was still correct, current, and up to the expected standard.
 
