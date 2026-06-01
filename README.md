@@ -74,3 +74,11 @@ During Weeks 21–22, I continued reviewing and making final corrections to the 
 I went back through the final presentation, written documentation, and repository content one more time to catch any remaining issues and confirm that all the materials were consistent with each other. At this stage, the focus was mainly on final quality checks, polishing the submission, and making sure the project was fully complete and ready for review without any loose ends.
 
 Overall, this period was about tightening up the final details and making sure the project was as clear, accurate, and professional as possible.
+
+## Phase 5 - Presentation & Showcase Progress (Week 23-24)
+
+During Weeks 23–24, I spent time updating, reviewing, and making a few more final corrections to the SPD Personnel Complaints Analysis project so that everything stayed accurate, current, and polished.
+
+I went back through the submitted materials again, including the presentation, written documentation, and repository content, to make sure everything was still consistent and up to the mark. At this stage, the work was mainly focused on final review, small corrections, and confirming that the project was complete and professionally presented.
+
+Overall, this period was about making sure the final submission was fully cleaned up, up to date, and ready to stand on its own.
